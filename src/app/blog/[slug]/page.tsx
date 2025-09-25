@@ -3,13 +3,12 @@ import { getAllPosts } from '@/lib/posts';
 
 export default function Home() {
   const posts = getAllPosts();
-
   return (
     <div className='space-y-8'>
       {posts.map((post) => (
         <article
           key={post.slug}
-          className='p-4 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow'
+          className='p-4 rounded-lg border hover:shadow-lg'
         >
           <Link href={`/blog/${post.slug}`}>
             <h2 className='text-2xl font-bold text-blue-600 hover:underline'>
